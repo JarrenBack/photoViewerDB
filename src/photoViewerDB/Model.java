@@ -11,7 +11,6 @@ public class Model {
 		return dbHelper.addPhoto(picNumInUI, pathOfPhoto);
 	}
 	
-	//To-do if the db wasn't able to delete the photo then return false
 	public boolean deletePhoto(int numPicToDelete) {
 		if (numPicToDelete < 0 || dbHelper.isEmpty())
 			return false;
@@ -20,7 +19,6 @@ public class Model {
 		return false;
 	}
 	
-	//To-do if the db wasn't able to update the photo then return false
 	public void saveDescDate(int picNumInUI, String desc, String date) {
 		int numPics = dbHelper.getNumPics();
 		if (picNumInUI <= 0 || dbHelper.isEmpty() || picNumInUI >= numPics) 
